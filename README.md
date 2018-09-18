@@ -21,6 +21,12 @@ Run with `$ ./main NumberOfShots NumberOfThreads`
 
 ## GO
 
-Build with `go build ApproxPi.go`
+### Serial
+Build with `$ go build ApproxPi.go`
 
-Run with `go run ApproxPi NumberOfShots`
+Run with `$ go run ApproxPi NumberOfShots`
+
+### Multi-Threaded
+Build with `$ go build ThreadApproxPi.go`
+
+Run with `$ go run ThreadApproxPi.go NumberOfShots NumberOfThreads`
