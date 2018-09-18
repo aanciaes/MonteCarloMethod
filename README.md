@@ -17,4 +17,4 @@ Run with `$ ./main NumberOfShots NumberOfThreads`
 
 Build with `go build approxPi.go`
 
-Run with `go run approxPi.go`
+Run with `go run approxPi NumberOfShots`
