@@ -3,9 +3,15 @@ Monte Carlo method for approximation of Pi written in multiple languages for pra
 
 ## Java
 
-Build `$ javac -cp . ApproxPi.java`
+### Serial
+Build `$ javac ApproxPi.java`
 
 Run with  `$ java ApproxPi NumberOfShots`
+
+### Multi-Threaded
+Build with `$ javac -cp . ThreadApproxPi.java`
+
+Run with `$ java ThreadApproxPi NumberOfShots NumberOfThreads`
 
 ## C
 
@@ -15,6 +21,6 @@ Run with `$ ./main NumberOfShots NumberOfThreads`
 
 ## GO
 
-Build with `go build approxPi.go`
+Build with `go build ApproxPi.go`
 
-Run with `go run approxPi NumberOfShots`
+Run with `go run ApproxPi NumberOfShots`
