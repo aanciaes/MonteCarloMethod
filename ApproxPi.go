@@ -5,10 +5,25 @@ import (
 	"math/rand"
 	"fmt"
 	"time"
+	"os"
+	"strconv"
 )
 
 func main() {
-	numberOfTries := 1000
+
+	if len(os.Args) != 2 {
+		fmt.Println("Usage: $ go run ApproxPi NumberOfShots")
+		return
+	}
+
+	i,err := strconv.Atoi(os.Args[1])
+	if err != nil {
+		// handle error
+		fmt.Println(err)
+		os.Exit(2)
+	}
+	numberOfTries := i
+
 	rst := approxPi(numberOfTries)
 	fmt.Println("Approximation of Pi", rst)
 }
@@ -40,3 +55,4 @@ func generateRandom() float64 {
 func calculateDistance(xCoord float64, yCoord float64) float64 {
 	return math.Sqrt((xCoord * xCoord) + (yCoord * yCoord))
 }
+
