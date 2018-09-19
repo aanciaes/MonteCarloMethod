@@ -14,10 +14,11 @@ Build with `$ javac -cp . ThreadApproxPi.java`
 Run with `$ java ThreadApproxPi NumberOfShots NumberOfThreads`
 
 ## C
+(only multi-threaded)
 
-Build with `$ gcc -Wall main.c -o main`
+Build with `$ gcc -Wall -Werror ThreadApproxPi.c -o ThreadApproxPi`
 
-Run with `$ ./main NumberOfShots NumberOfThreads`
+Run with `$ ./ThreadApproxPi NumberOfShots NumberOfThreads`
 
 ## GO
 
