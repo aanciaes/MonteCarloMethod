@@ -37,10 +37,9 @@ void* approxPi (void *args) {
     int localInTarget = 0;
 
     // XOR pid with time to create semi-unique state
-    unsigned int state = time(NULL) ^ getpid();
+    unsigned int state = time(NULL) ^ getpid() ^ (int) pthread_self();
 
-    int i;
-    for (i = 0; i < numberOfShots; i++) {
+    for (int i = 0; i < numberOfShots; i++) {
 
         double xCoor = fRand(&state);
         double yCoor = fRand(&state);
